@@ -44,6 +44,15 @@ header {
     border-bottom-left-radius: 225px;
 }
 
+.innerHeader {
+    width: 30%;
+    height: 250px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--darkBlueText);
+}
 .container {
     position: absolute;
     top: 50%;
