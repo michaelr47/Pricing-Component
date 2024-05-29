@@ -39,28 +39,52 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 45vh;
+    height: 50vh;
     background-color: var(--graySliderBar);
     border-bottom-left-radius: 225px;
 }
 
 .innerHeader {
-    width: 30%;
+    position: relative;
+    width: 300px;
     height: 250px;
+ 
+}
+
+.innerHeader img {
+    position: absolute;
+    top: 0;
+    left: 20%;
 }
 
 h1 {
-    font-size: 1.5rem;
+    position: absolute;
+    top: 5%;
+    z-index: 2;
+    font-size: 1.3rem;
     color: var(--darkBlueText);
 }
+
+.innerHeader p {
+    width: 90%;
+    text-align: center;
+}
+
+.sign-up {
+    position: absolute;
+    top: 20%;
+    font-size: 15px;
+    color: var(--grayBlueText);
+    font-weight: 600;
+}
 .container {
+    width: 350px;
+    height: 425px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -35%);
+    transform: translate(-50%, -27%);
     background-color: var(--whiteContainerBG);
-    max-width: 600px;
-    height: 400px;
-    border: 2px solid black;
-    
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
