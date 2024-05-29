@@ -78,13 +78,17 @@ h1 {
     font-weight: 600;
 }
 .container {
-    width: 350px;
+    width: 330px;
     height: 425px;
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -27%);
     background-color: var(--whiteContainerBG);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    
 }
