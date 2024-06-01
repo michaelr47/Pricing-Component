@@ -93,3 +93,11 @@ h1 {
     align-items: center;
     
 }
+
+.views {
+    color: var(--grayBlueText);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+}
