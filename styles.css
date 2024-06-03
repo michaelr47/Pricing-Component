@@ -106,3 +106,17 @@ h1 {
     font-weight: 800; 
     color: var(--darkBlueText)
 }
+
+.billing {
+    font-size: 15px;
+    color: var(--grayBlueText);
+
+}
+
+.discount {
+    padding: 5px;
+    border-radius: 20px;
+    background-color: var(--redBGDiscount);
+    color: var(--redDiscount);
+    font-weight: 600;
+}
