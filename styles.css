@@ -122,5 +122,8 @@ h1 {
     border-radius: 20px;
     background-color: var(--redBGDiscount);
     color: var(--redDiscount);
-    /* font-weight: 600; */
+}
+
+ul {
+    list-style-image: url(./images/icon-check.svg);
 }
