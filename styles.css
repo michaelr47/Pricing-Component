@@ -78,7 +78,7 @@ h1 {
     font-weight: 600;
 }
 .container {
-    width: 330px;
+    width: 350px;
     height: 425px;
     position: absolute;
     top: 47%;
@@ -108,6 +108,71 @@ h1 {
 }
 
 .billing {
+   font-size: 14px;
+    font-weight: 600;
+    color: var(--grayBlueText);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.discount {
+    padding: 3px;
+    border-radius: 20px;
+    background-color: var(--redBGDiscount);
+    color: var(--redDiscount);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.round {
+    border-radius: 34px;
+}
+/* .billing {
     font-size: 14px;
     font-weight: 600;
     color: var(--grayBlueText);
@@ -127,3 +192,13 @@ h1 {
 ul {
     list-style-image: url(./images/icon-check.svg);
 }
+
+.trialButton {
+    border: none; 
+    border-radius: 25px;
+    padding: 1rem;
+    background-color: var(--darkBlueText);
+    color: var(--toggleBackgroundBlue);
+    font-weight: 600;
+    
+} */
