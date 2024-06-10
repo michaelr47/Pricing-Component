@@ -101,6 +101,16 @@ h1 {
     letter-spacing: 1px;
 }
 
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--graySliderBar);
+    cursor: pointer;
+    width: 15rem;
+    border-radius: 15px;
+   }
+
 .price {
     font-size: 32px;
     font-weight: 800; 
