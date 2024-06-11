@@ -182,25 +182,12 @@ input:checked + .slider:before {
 .round {
     border-radius: 34px;
 }
-/* .billing {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--grayBlueText);
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.discount {
-    padding: 5px;
-    border-radius: 20px;
-    background-color: var(--redBGDiscount);
-    color: var(--redDiscount);
-}
 
 ul {
     list-style-image: url(./images/icon-check.svg);
+    font-size: 14px;
+    color: var(--grayBlueText);
+    font-weight: 600;
 }
 
 .trialButton {
@@ -210,5 +197,5 @@ ul {
     background-color: var(--darkBlueText);
     color: var(--toggleBackgroundBlue);
     font-weight: 600;
-    
-} */
+    width: 50%;
+} 
