@@ -1,9 +1,13 @@
-document.getElementById('billing-toggle').addEventListener('change', function() {
+let toggleBillingInput = document.getElementById('billing-toggle');
+let rangeInput = document.getElementById('rangeSlider');
+let priceChange = document.querySelector('.price');
+
+toggleBillingInput.addEventListener('change', () => {
     if(this.checked) {
         console.log('Yearly billing selected');
-        // Add any functionality you need for yearly billing
+        
     } else {
         console.log('Monthly billing selected');
-        // Add any functionality you need for monthly billing
+        
     }
 });
