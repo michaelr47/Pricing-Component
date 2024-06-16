@@ -189,6 +189,9 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 20px;
 }
 
+.slider:hover {
+    background-color: var(--aquaSliderBG);
+}
 .slider:before {
     position: absolute;
     content: "";
@@ -229,3 +232,8 @@ ul {
     font-weight: 600;
     width: 50%;
 } 
+
+.trialButton:hover {
+    cursor: pointer;
+    color: var(--whiteContainerBG);
+}
