@@ -249,6 +249,12 @@ ul {
 li {
     margin: 10px 0px;
 }
+.month:nth-child(even) {
+    display: none;
+}
+.month:nth-child(odd) {
+    display: block;
+}
 
 @media only screen and (min-width: 768px) {
     .container {
@@ -268,5 +274,18 @@ li {
     }
     .trialButton {
         height: 50px;
+    }
+    .numbers {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .month:nth-child(odd) {
+        display: none;
+    }
+    .month:nth-child(even) {
+        display: block;
     }
 }
