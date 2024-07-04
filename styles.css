@@ -288,4 +288,16 @@ li {
     .month:nth-child(even) {
         display: block;
     }
+
+    input[type="range"] {
+        width: 29rem;
+    }
+
+    .numbers {
+        width: 450px;
+        justify-content: space-between;
+    }
+    .price {
+        font-size: 2.5rem;
+    }
 }
