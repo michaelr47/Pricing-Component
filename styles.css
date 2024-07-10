@@ -123,10 +123,10 @@ input[type="range"]::-webkit-slider-thumb {
     background-size: auto;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 25px 1px var(--aquaSliderBG);
 }
 
-input[type="range"]::-moz-range-thumb {
+/* input[type="range"]::-moz-range-thumb {
     width: 25px;
     height: 25px;
     background: url('./images/icon-slider.svg') no-repeat center center;
@@ -134,7 +134,7 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .price {
     font-size: 32px;

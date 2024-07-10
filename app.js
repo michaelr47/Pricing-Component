@@ -3,7 +3,7 @@ let rangeInput = document.getElementById('rangeSlider');
 let priceChange = document.querySelector('.price');
 
 toggleBillingInput.addEventListener('change', () => {
-    if(this.checked) {
+    if (toggleBillingInput.checked) {
         console.log('Yearly billing selected');
         
     } else {
