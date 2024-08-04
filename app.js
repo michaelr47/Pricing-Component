@@ -1,11 +1,10 @@
 let toggleBillingInput = document.getElementById('billing-toggle');
 let rangeInput = document.getElementById('rangeSlider');
-let priceChange = document.querySelector('.price');
+let monthPrice = document.querySelector('.price');
 
 toggleBillingInput.addEventListener('change', () => {
     if (toggleBillingInput.checked) {
-        console.log('Yearly billing selected');
-        
+        twentyFiveDiscount(monthPrice);
     } else {
         console.log('Monthly billing selected');
         
