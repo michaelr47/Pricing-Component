@@ -1,6 +1,9 @@
 let toggleBillingInput = document.getElementById('billing-toggle');
 let rangeInput = document.getElementById('rangeSlider');
 let monthPrice = document.querySelector('.price');
+let pageViews = document.getElementById('viewsNumber');
+const viewsArray = [10, 50, 100, 500];
+const pricesArray = [8, 12, 16, 20];
 
 rangeInput.addEventListener('input', (e) => {
     if (e.target.value === 0) {
@@ -10,7 +13,7 @@ rangeInput.addEventListener('input', (e) => {
     else if (e.target.value === 1) {
         return 'two';
     }
-    else if (e.target.value === 2) {
+    else if (e.target.value === 2) { 
         return 'three';
     }
     else {
