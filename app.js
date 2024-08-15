@@ -17,20 +17,42 @@ rangeInput.addEventListener('input', (e) => {
 });
 
 
+// toggleBillingInput.addEventListener('change', () => {
+//     if (toggleBillingInput.checked) {
+//         twentyFiveDiscount(monthPrices);
+//     } else {
+//         console.log('Monthly billing selected');
+        
+//     }
+// });
+
+// const twentyFiveDiscount = total => {
+
+//     let discountPercentage = 0.25;
+//     let handleDiscount = total * discountPercentage;
+//     let result = total - handleDiscount;
+//     return result;
+    
+// }
+
 toggleBillingInput.addEventListener('change', () => {
     if (toggleBillingInput.checked) {
-        twentyFiveDiscount(monthPrices);
+        const discountedPrice = applyDiscount(monthPrices, 0.25);
+        updatePriceDisplay(discountedPrice);
     } else {
-        console.log('Monthly billing selected');
-        
+        updatePriceDisplay(monthPrices); 
     }
 });
 
-const twentyFiveDiscount = total => {
-
-    let discountPercentage = 0.25;
-    let handleDiscount = total * discountPercentage;
-    let result = total - handleDiscount;
-    return result;
-    
+const applyDiscount = (total, discountPercentage) => {
+    return total * (1 - discountPercentage);
 }
+
+const updatePriceDisplay = price => {
+    monthPrices.forEach(priceDisplay => {
+        if (priceDisplay) {
+            priceDisplay.textContent = `$${priceDisplay.toFixed(2)}`;
+        }
+    })
+}
+
