@@ -35,24 +35,42 @@ rangeInput.addEventListener('input', (e) => {
     
 // }
 
+const applyDiscount = (prices, discountPercentage) => {
+    if (Array.isArray(prices)) {
+        return prices.map(price => price * (1 - discountPercentage));
+    } else {
+        return prices * (1 - discountPercentage);
+    }
+}
+
+// Function to update the displayed prices
+const updatePriceDisplay = prices => {
+    const priceDisplays = document.querySelectorAll('.monthPrices'); // Assuming prices are in elements with this class
+    if (Array.isArray(prices)) {
+        priceDisplays.forEach((priceDisplay, index) => {
+            if (priceDisplay) {
+                priceDisplay.textContent = `$${prices[index].toFixed(2)}`;
+            }
+        });
+    } else {
+        priceDisplays.forEach(priceDisplay => {
+            if (priceDisplay) {
+                priceDisplay.textContent = `$${prices.toFixed(2)}`;
+            }
+        });
+    }
+}
+
+
+// Event listener for the toggle
 toggleBillingInput.addEventListener('change', () => {
     if (toggleBillingInput.checked) {
-        const discountedPrice = applyDiscount(monthPrices, 0.25);
-        updatePriceDisplay(discountedPrice);
+        const discountedPrices = applyDiscount(monthPrices, 0.25);
+        console.log(discountedPrices);
+        updatePriceDisplay(discountedPrices);
     } else {
         updatePriceDisplay(monthPrices); 
     }
 });
 
-const applyDiscount = (total, discountPercentage) => {
-    return total * (1 - discountPercentage);
-}
-
-const updatePriceDisplay = price => {
-    monthPrices.forEach(priceDisplay => {
-        if (priceDisplay) {
-            priceDisplay.textContent = `$${priceDisplay.toFixed(2)}`;
-        }
-    })
-}
 
