@@ -43,9 +43,8 @@ const applyDiscount = (prices, discountPercentage) => {
     }
 }
 
-// Function to update the displayed prices
 const updatePriceDisplay = prices => {
-    const priceDisplays = document.querySelectorAll('.monthPrices'); // Assuming prices are in elements with this class
+    const priceDisplays = document.querySelectorAll('.monthPrices'); 
     if (Array.isArray(prices)) {
         priceDisplays.forEach((priceDisplay, index) => {
             if (priceDisplay) {
@@ -62,15 +61,22 @@ const updatePriceDisplay = prices => {
 }
 
 
-// Event listener for the toggle
 toggleBillingInput.addEventListener('change', () => {
     if (toggleBillingInput.checked) {
-        const discountedPrices = applyDiscount(monthPrices, 0.25);
-        console.log(discountedPrices);
-        updatePriceDisplay(discountedPrices);
+
+        const discountedPrices = Array.from(monthPrices).map(priceElement => {
+            let textPrice = priceElement.innerText.replace('$', ''); 
+            return applyDiscount(Number(textPrice), 0.25);
+        });
+
+        console.log(discountedPrices[0]);
+        updatePriceDisplay(discountedPrices[0]);
     } else {
-        updatePriceDisplay(monthPrices); 
+
+        const originalPrices = Array.from(monthPrices).map(priceElement => {
+            return Number(priceElement.innerText.replace('$', ''));
+        });
+
+        updatePriceDisplay(originalPrices);
     }
 });
-
-
