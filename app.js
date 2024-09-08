@@ -4,7 +4,7 @@ let monthPrices = document.querySelectorAll('.price');
 let pageViews = document.getElementById('viewsNumber');
 
 const viewsArray = [10, 50, 100, 500, 100];
-const pricesArray = [8, 12, 16, 20, 150];
+const pricesArray = [8, 12, 16, 30, 50];
 
 rangeInput.addEventListener('input', (e) => {
     let currentValue = Number(e.target.value);
@@ -16,25 +16,6 @@ rangeInput.addEventListener('input', (e) => {
     });
 });
 
-
-// toggleBillingInput.addEventListener('change', () => {
-//     if (toggleBillingInput.checked) {
-//         twentyFiveDiscount(monthPrices);
-//     } else {
-//         console.log('Monthly billing selected');
-        
-//     }
-// });
-
-// const twentyFiveDiscount = total => {
-
-//     let discountPercentage = 0.25;
-//     let handleDiscount = total * discountPercentage;
-//     let result = total - handleDiscount;
-//     return result;
-    
-// }
-
 const applyDiscount = (prices, discountPercentage) => {
     if (Array.isArray(prices)) {
         return prices.map(price => price * (1 - discountPercentage));
@@ -44,7 +25,7 @@ const applyDiscount = (prices, discountPercentage) => {
 }
 
 const updatePriceDisplay = prices => {
-    const priceDisplays = document.querySelectorAll('.monthPrices'); 
+    const priceDisplays = document.querySelectorAll('.price'); 
     if (Array.isArray(prices)) {
         priceDisplays.forEach((priceDisplay, index) => {
             if (priceDisplay) {
@@ -60,7 +41,6 @@ const updatePriceDisplay = prices => {
     }
 }
 
-
 toggleBillingInput.addEventListener('change', () => {
     if (toggleBillingInput.checked) {
 
@@ -69,8 +49,8 @@ toggleBillingInput.addEventListener('change', () => {
             return applyDiscount(Number(textPrice), 0.25);
         });
 
-        console.log(discountedPrices[0]);
-        updatePriceDisplay(discountedPrices[0]);
+        console.log(discountedPrices);
+        updatePriceDisplay(discountedPrices);
     } else {
 
         const originalPrices = Array.from(monthPrices).map(priceElement => {
