@@ -37,7 +37,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 50vh;
     background-color: var(--graySliderBar);
     border-bottom-left-radius: 225px;
@@ -45,21 +44,25 @@ header {
 
 .innerHeader {
     position: relative;
-    width: 300px;
+    width: 500px;
     height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .innerHeader img {
     position: absolute;
     top: 0;
-    left: 20%;
+    left: 35%;
 }
 
 h1 {
     position: absolute;
     top: 5%;
     z-index: 2;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 800;
     color: var(--darkBlueText);
 }
 
