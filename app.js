@@ -49,8 +49,8 @@ toggleBillingInput.addEventListener('change', () => {
             return applyDiscount(Number(textPrice), 0.25);
         });
 
-        console.log(discountedPrices);
         updatePriceDisplay(discountedPrices);
+        
     } else {
 
         const originalPrices = Array.from(monthPrices).map(priceElement => {
